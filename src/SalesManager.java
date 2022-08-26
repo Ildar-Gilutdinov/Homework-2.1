@@ -1,26 +1,26 @@
 import java.util.Arrays;
 
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
     }
-    public static double salesMinMax(int[] sales) { // метод расчета среднего
+    public static double salesMinMax(long[] sales) { // метод расчета среднего
         System.out.println("Программа расчета обрезанного среднего");
         System.out.println("Данные массива: " + "\n" + Arrays.toString(sales)); //вывод исходных данных
-        int max = sales[0];
-        int min = sales[0];
+        long max = sales[0];
+        long min = sales[0];
         long sum = 0;
         for (int i = 0; i < sales.length; i++) { //цикл for
             sum = sum + sales[i];
